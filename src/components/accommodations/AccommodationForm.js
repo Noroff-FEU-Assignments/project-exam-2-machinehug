@@ -22,6 +22,11 @@ const schema = yup.object().shape({
 	last_name: yup.string().required("Please enter your last name.").min(MIN_LASTNAME_LENGTH, `Must be at least ${MIN_LASTNAME_LENGTH} characters.`).max(MAX_LASTNAME_LENGTH, `Cannot be more than ${MAX_LASTNAME_LENGTH} characters.`),
     email: yup.string().required("Please enter your email address.").email("Please enter a valid email address."),
 	phone: yup.string().matches(PHONE_REGEX, "Phone number is not valid."),
+    pets: yup.number().required(),
+	children: yup.number().required(),
+	rooms: yup.number().required(),
+	adults: yup.number().required(),
+
 });
 
 export default function AccommodationForm({api}) {
@@ -117,32 +122,31 @@ export default function AccommodationForm({api}) {
                         <div>
                             <label htmlFor="rooms">Rooms</label>
                             <select name="rooms" {...register("rooms")}>
-                                <option value="1" {...register("rooms")}>1</option>
-                                <option value="2" {...register("rooms")}>2</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
                             </select>
                         </div>
                         <div>
                             <label htmlFor="adults">Adults</label>
                             <select name="adults" {...register("adults")}>
-                                <option value="1" {...register("adults")}>1</option>
-                                <option value="2" {...register("adults")}>2</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
                             </select>
                         </div>
                         <div>
                             <label htmlFor="pets">Pets</label>
                             <select name="pets" {...register("pets")}>
-                                <option value="0" {...register("pets")}>0</option>
-                                <option value="1" {...register("pets")}>1</option>
-                                <option value="2" {...register("pets")}>2</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
                             </select>
                         </div>
                         <div>
                             <label htmlFor="children">Children</label>
                             <select name="children" {...register("children")}>
-                                <option value="0" {...register("children")}>0</option>
-                                <option value="1" {...register("children")}>1</option>
-                                <option value="2" {...register("children")}>2</option>
-                                <option value="3" {...register("children")}>3</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
                             </select>
                         </div>
                     </div>

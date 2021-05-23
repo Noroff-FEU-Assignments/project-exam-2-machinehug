@@ -10,7 +10,7 @@ export default function Head({currentPage}) {
 			<meta name="theme-color" content="#fff" />
 
 			<link rel="icon" href="/favicon/favicon.ico" />
-			<link rel="icon" href="favicon/icon.png" type="image/png" />
+			<link rel="icon" href="icon.png" type="image/png" />
 			<link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
 			<link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
 			<link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />

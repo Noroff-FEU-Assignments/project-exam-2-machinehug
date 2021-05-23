@@ -81,7 +81,7 @@ export default function Header() {
                             <ul>
                                 <Link href="/contact"><a><li><i className="fas fa-phone-alt"></i> Contact us</li></a></Link>
                                 <Link href="/"><a><li><i className="fas fa-question"></i> Customer service</li></a></Link>
-                                <Link href={isLoggedIn ? "/" : "/login"}><a><li><i className="fas fa-grin"></i> {isLoggedIn ? "Logout" : "Login"}</li></a></Link>
+                                <Link href={isLoggedIn ? "/" : "/login"}><a onClick={isLoggedIn ? logOut : false}><li><i className="fas fa-grin"></i> {isLoggedIn ? "Logout" : "Login"}</li></a></Link>
                             </ul>
                             <hr />
                             {isLoggedIn &&
