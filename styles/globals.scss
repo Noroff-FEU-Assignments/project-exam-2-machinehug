@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "typography.scss";
+@import "./components/FeedbackMessage.module.scss";
 
 :root {
   /*no scrollbar in Firefox*/
@@ -146,3 +147,19 @@ textarea {
   min-height: 15rem;
   max-width: 10rem;
 }
+
+/*
+.error,
+.success {
+  margin: 2rem 0;
+  padding: 0.65rem 1rem;
+}
+
+.error {
+  background: map-get($colors, pink);
+}
+
+.success {
+  background: map-get($colors, turquoise);
+}
+*/

@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
-import styles from "../../../styles/components/FeedbackMessage.module.scss";
 
-export default function FeedbackMessage({message}) {
-
-	return <div className={styles.message}>{message}</div>;
+export default function FeedbackMessage({ message, type }) {
+	return <div className={type}>{message}</div>;
 };
 
 FeedbackMessage.propTypes = {
-	message: PropTypes.string.isRequired
+	message: PropTypes.string.isRequired,
+	type: PropTypes.string,
+};
+
+FeedbackMessage.defaultProps = {
+	type: "",
 };
